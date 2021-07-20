@@ -192,7 +192,8 @@ a {
 }
 
 .clock-text-hour,
-.clock-text-minutes{
+.clock-text-minutes,
+.clock-text-seconds{
     font-size: var(--biggest-font-size);
     font-weight: var(--font-medium);
     color: var(--title-color);

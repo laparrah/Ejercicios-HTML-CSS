@@ -18,6 +18,7 @@ setInterval(clock, 1000) // 1000 = 1s
 
 const textHour = document.getElementById('text-hour'),
         textMinutes = document.getElementById('text-minutes'),
+        textSeconds = document.getElementById('text-seconds'),
         textAmPm = document.getElementById('text-ampm')
         
         dateDay = document.getElementById('date-day'),
@@ -30,6 +31,7 @@ const clockText = () => {
     let hh = date.getHours(),
         amppm,
         mm = date.getMinutes(),
+        sss = date.getSeconds(),
 
         day = date.getDate(),
         month = date.getMonth(),
@@ -52,8 +54,12 @@ const clockText = () => {
     //Muestra un 0 antes de los minutos cuando sean menor a 10
     if(mm < 10) {mm = `0${mm}`}
 
+    //Muestra un 0 antes de los segundos cuando sean menor a 10
+    if(sss < 10) {sss = `0${sss}`}
+
     //Mostrar la hora
-    textMinutes.innerHTML = mm  //minutos
+    textSeconds.innerHTML = `${sss}` //minutos
+    textMinutes.innerHTML = `${mm}:` //minutos
     textHour.innerHTML = `${hh}:`   //horas
     textAmPm.innerHTML = ampm       //AM o PM
 
