@@ -58,7 +58,7 @@ const clockText = () => {
     if(sss < 10) {sss = `0${sss}`}
 
     //Mostrar la hora
-    textSeconds.innerHTML = `${sss}` //minutos
+    textSeconds.innerHTML = `${sss}` //segundos
     textMinutes.innerHTML = `${mm}:` //minutos
     textHour.innerHTML = `${hh}:`   //horas
     textAmPm.innerHTML = ampm       //AM o PM
